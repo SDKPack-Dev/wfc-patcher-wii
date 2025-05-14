@@ -54,4 +54,5 @@ launcher/build
 
 # Keys that should likely not be comitted
 misc/private-key-OUT.pem
+misc/private-key-dev.pem
 misc/wwfcPayloadPublicKey-OUT.hpp

@@ -31,9 +31,9 @@ typedef double f64;
 #ifndef WWFC_DOMAIN
 
 #  ifdef PROD
-#    define WWFC_DOMAIN "zplwii.xyz"
+#    define WWFC_DOMAIN "sdkpack.net"
 #  else
-#    define WWFC_DOMAIN "zpltest.xyz" // Test Server
+#    define WWFC_DOMAIN "sdkpack.net" // Test Server
 #  endif
 
 #endif
