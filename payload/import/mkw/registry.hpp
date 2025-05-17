@@ -189,6 +189,8 @@ static bool IsCombinationValidBT(Character character, Vehicle vehicle)
 
 static bool IsRaceCourse(Course course)
 {
+    // FIXME: Handle this correctly for custom courses?
+    return true;
     return course >= Course::MarioCircuit && course <= Course::GBAShyGuyBeach;
 }
 
