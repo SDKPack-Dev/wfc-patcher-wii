@@ -159,7 +159,7 @@ if $keys || ( (! check_keys) && $try_make_keys); then
     cd "$MISC_DIR"
     echo "Creating new keys!"
 
-    python generate-key.py new private-key-OUT.pem wwfcPayloadPublicKey-OUT.hpp
+    python3 generate-key.py new private-key-OUT.pem wwfcPayloadPublicKey-OUT.hpp
 
     echo "Copying wwfcPayloadPublicKey-OUT.hpp to $SCRIPT_DIR/include/wwfcPayloadPublicKey.hpp"
     cp "$MISC_DIR/wwfcPayloadPublicKey-OUT.hpp" "$SCRIPT_DIR/include/wwfcPayloadPublicKey.hpp"
@@ -178,7 +178,7 @@ if $payload; then
     cd "$PAYLOAD_DIR"
     echo "Making payloads!"
 
-    python make-payload.py $args
+    python3 make-payload.py $args
 
     if [ -e "$SCRIPT_DIR/dist/binary" ]; then
         rm -r "$SCRIPT_DIR/dist/binary"
@@ -192,7 +192,7 @@ if $stage1; then
     cd "$STAGE1_DIR"
     echo "Making stage1!"
 
-    python make-stage1.py $args
+    python3 make-stage1.py $args
 
     echo "Copying stage1.bin to dist!"
     cp "$SCRIPT_DIR/stage1/build/stage1.bin" "$SCRIPT_DIR/dist/stage1.bin"
@@ -202,12 +202,12 @@ if $patch; then
     cd "$PATCH_DIR"
     echo -e "Generating patches!"
 
-    python make-patch.py $args
+    python3 make-patch.py $args
 fi
 
 if $exploit; then
     cd "$EXPLOIT_DIR"
     echo -e "Making exploit!"
 
-    python make-sbcm-patch.py $args
+    python3 make-sbcm-patch.py $args
 fi

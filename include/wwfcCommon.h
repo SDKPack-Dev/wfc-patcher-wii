@@ -31,11 +31,11 @@ typedef double f64;
 #ifndef WWFC_DOMAIN
 
 #  ifdef PROD
-#    define WWFC_DOMAIN "rwfc.net" // Production server
+#    define WWFC_DOMAIN "sdkpack.net" // Production server
 #  elif defined(TEST)
-#    define WWFC_DOMAIN "zpltest.xyz" // Testing server
+#    define WWFC_DOMAIN "sdkpack.net" // Testing server
 #  else
-#    define WWFC_DOMAIN "nwfc.wiinoma.com" // Points to localhost
+#    define WWFC_DOMAIN "sdkpack.net" // Points to localhost
 #  endif
 
 #endif
